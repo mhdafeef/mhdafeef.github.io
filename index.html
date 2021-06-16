@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+          <div class="front-face">
+              
+            
+            Click to flip
+
+        <button class="butn-front">Front</button>
+          </div>
+          <div class="back-face">
+              
+
+
+            <div class="pay-form">
+                <!--form area start-->
+                <div class="form">
+                  <!--login form start-->
+                  <form class="login-form" action="" method="post">
+                    <i class="fas fa-user-circle"></i>
+                    <input class="user-input" type="text" id="name" onkeyup="success()" placeholder="Enter your name" required>
+                    <input class="user-input" type="number" id="amount" onkeyup="success()" placeholder="Enter amount" required>
+            
+                    <input id="button" onClick="payNow()" disabled class="btn" type="submit" name="" value="Pay Now">
+                </div>
+                <!--form area end-->
+              </div>            
+
+    <!--    <button class="butn-back">Back</button> -->
+            <div class="area" >
+                <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+        </div >
+          </div>
+        </div>
+      </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
