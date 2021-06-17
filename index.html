@@ -25,13 +25,23 @@
                 <!--form area start-->
                 <div class="form">
                   <!--login form start-->
-                  <form class="login-form" action="" method="post">
                     <i class="fas fa-user-circle"></i>
-                    <input class="user-input" type="text" id="name" onkeyup="success()" placeholder="Enter your name" required>
-                    <input class="user-input" type="number" id="amount" onkeyup="success()" placeholder="Enter amount" required>
-            
-                    <input id="button" onClick="payNow()" class="btn" type="submit" name="" value="Pay Now">
+                    <input class="user-input" type="text" id="name" onkeyup="success()" placeholder="Enter your name">
+                    <input class="user-input" type="number" id="amount" onkeyup="success()" placeholder="Enter amount">
                 </div>
+
+
+                    <div  class="actions">
+                      <div class="pay-btn">
+                      
+                         <!-- "upi://pay?pn=MOHAMED AFEEF&amp;pa=mhdafeef@ybl&amp;cu=INR&amp;am=100.0" -->
+                          <button class="paynow-btn" onClick="payNow()">Pay Now</button></a>
+          
+                  <br>
+                          <br>
+                      </div>
+                  </div>
+                 
                 <!--form area end-->
               </div>            
 
