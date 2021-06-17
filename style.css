@@ -112,7 +112,6 @@ body {
 
 .top-box .fname {
   font-size: 25px;
-  margin-left: 150px;
   margin-top: -105px;
   line-height: 30px;
 }
@@ -120,18 +119,20 @@ body {
 .top-box .lname {
   font-size: 25px;
   font-weight: 300;
-  margin-left: 150px;
   margin-top: -18px;
   line-height: 30px;
 }
 
+.top-box .typing-text {
+  margin-left: 148px;
+}
+
 .top-box span {
+  position: relative;
   color: #000;
   font-size: 18px;
-  margin-left: 150px;
-  margin-top: -20px;
-
   font-weight:  500;
+  top: -10px;
 }
 
 
