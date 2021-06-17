@@ -11,7 +11,7 @@ $('.butn-front').on('click', function () {
     var nam = document.getElementById("name").value;
     var amo = document.getElementById("amount").value;
     
-    window.open("upi://pay?pa=Q72011719@ybl&pn=MOHAMED%20AFEEF&tn=" + nam + "&am=" + amo + "&cu=INR&mc=7277");
+    window.open("upi://pay?pn=MOHAMED%20AFEEF&pa=Q72011719@ybl&am=" + amo + "&tn=" + nam + "&cu=INR&mc=7277");
     }
 
 /* Disable a button if one of the inputs is empty start */
