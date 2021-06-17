@@ -13,12 +13,3 @@ $('.butn-front').on('click', function () {
     
     window.open("upi://pay?pa=Q72011719@ybl&pn=MOHAMED%20AFEEF&tn=" + nam + "&am=" + amo + "&cu=INR&mc=7277");
     }
-
-
-  function success() {
-    if(document.getElementById("name", "amount").value==="0") {
-             document.getElementById('button').disabled = true; 
-         } else { 
-             document.getElementById('button').disabled = false;
-         }
-     }
