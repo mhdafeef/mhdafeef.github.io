@@ -13,3 +13,20 @@ $('.butn-front').on('click', function () {
     
     window.open("upi://pay?pa=Q72011719@ybl&pn=MOHAMED%20AFEEF&tn=" + nam + "&am=" + amo + "&cu=INR&mc=7277");
     }
+
+/* Disable a button if one of the inputs is empty start */
+
+    let payNowBtn = document.querySelector('.paynow-btn');
+    let payForm = document.querySelector('.pay-form');
+    let inputs = [...payForm.querySelectorAll('.user-input')];
+
+    function validate() {
+      let isIncomplete = inputs.some(input => !input.value);
+      payNowBtn.disabled = isIncomplete;
+      payNowBtn.style.cursor = isIncomplete ? 'not-allowed' : 'pointer';
+    }
+
+    payForm.addEventListener('input', validate);
+    validate();
+
+/* Disable a button if one of the inputs is empty end */
