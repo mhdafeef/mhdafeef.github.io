@@ -16,7 +16,7 @@ $('.butn-front').on('click', function () {
 
 
   function success() {
-    if(document.getElementById("name", "amount").value==="") {
+    if(document.getElementById("name", "amount").value==="0") {
              document.getElementById('button').disabled = true; 
          } else { 
              document.getElementById('button').disabled = false;
