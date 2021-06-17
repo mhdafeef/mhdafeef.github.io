@@ -162,6 +162,7 @@ body {
   }
   
   .form .btn:hover{
+    border-radius: 30px;
     border-left: solid 8px rgba(255, 255, 255, 0.5);
     border-right: solid 8px rgba(255, 255, 255, 0.5);
     background: #32c75f;
