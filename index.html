@@ -1,90 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flip Profile</title>
+	<link rel="stylesheet" href="main.css" />
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-          <div class="front-face">
-            <div class="front-face-container">
+	<div class="card">
+		<div class="card-inner">
 
-              <div class="top-box">
-                <img class="cover-img" src="images/Cover-1.jpg">
-                <img class="pro-pic" src="images/Cover-1.jpg">
-                <div class="typing-text">
-                <h1 class="fname">MOHAMED</h1>
-                <h1 class="lname">AFEEF</h1>
-                <span class="typing"></span>
-              </div>
-              </div>
-              
-            <div class="hal2">Hallo</div>
+<!-- Card start Start-->
 
-
-
-            <div class="butn-front-cont">
-              <button class="butn-front">Front</button>
-            </div>
-            </div>
-      
-          </div>
-          <div class="back-face">
-              
+			<div class="card-face card-face--front">
+				<div class="card-content">
+					<div class="card-header-front">
+						<img src="pro-pic.svg" alt="" class="pp" />
+						<h2>Mohamed Afeef</h2>
+						<span>Graphics Designer</span>
+					</div>
+					<div class="card-body1">
+						<h3>JavaScript Wizard</h3>
+						<p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur <strong>adipiscing</strong> elit. Sed id erat a magna lobortis dictum. Nunc est arcu, <strong>lacinia</strong> quis sapien placerat, <strong>laoreet</strong> tincidunt nulla.</p>
+					</div>
+				</div>
+			</div>
 
 
-            <div class="pay-form">
-                <!--form area start-->
-                <div class="form-cont">
-                <div class="form">
-                  <!--login form start-->
-                    <i class="fas fa-user-circle"></i>
-                    <input class="user-input" type="text" id="name" onkeyup="success()" placeholder="Enter your name">
-                    <input class="user-input" type="number" id="amount" onkeyup="success()" placeholder="Enter amount">
-                </div>
 
 
-                    <div  class="actions">
-                      <div class="pay-btn">
-                      
-                         <!-- "upi://pay?pn=MOHAMED AFEEF&amp;pa=mhdafeef@ybl&amp;cu=INR&amp;am=100.0" -->
-                          <button class="paynow-btn" onClick="payNow()">Pay Now</button></a>
-          
-                      </div>
-                  </div>
-                </div>
-                 
-                <div>
-                  <button class="butn-back">Back</button>
-                </div>
-                <!--form area end-->
-              </div>            
 
-            
 
-            <div class="area" >
-                <ul class="circles">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                </ul>
-        </div >
-          </div>
-        </div>
-      </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="script.js"></script>
+
+
+
+<!-- Card start End-->
+
+
+
+
+
+<!-- Card back Start-->
+
+			<div class="card-face card-face--back">
+				<div class="card-content">
+					<div class="card-header-back">
+						<img src="pro-pic.svg" alt="" class="pp" />
+						<h2>Mohamed Afeef</h2>
+						<span>Graphics Designer</span>
+					</div>
+					<div class="card-body2">
+						<h3>Payment</h3> <p class="amount-pre" value>199.00</p>
+						<input class="" type="text" id="name" placeholder="Enter Name">
+						<input type="number" id="amount" placeholder="Enter Amount">
+						
+					</div>
+				</div>
+			</div>
+
+<!-- Card back End-->
+
+		</div>
+	</div>
+	<script src="main.js"></script>
 </body>
 </html>
