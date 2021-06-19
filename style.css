@@ -23,7 +23,7 @@ body {
   perspective: 1000px;
 }
 
-.card-inner {
+#card-inner {
   width: 100%;
   height: 100%;
   transition: transform 1s;
@@ -32,7 +32,7 @@ body {
   position: relative;
 }
 
-.card-inner.is-flipped {
+.is-flipped {
   transform: rotateY(-180deg);
 }
 
@@ -100,26 +100,25 @@ body {
   right: 0;
   bottom: 0;
   background-image: url(header-bg.svg);
+  background-position-y: -40px;
   background-size: cover;
   z-index: -1;
+  height: 290px;
   border-radius: 0px 0px 0% 0px;
-  margin-top: -40px;
 }
 
 .pp {
-  display: block;
+  display: flex;
   width: 170px;
   height: 170px;
-  margin: -12px auto 0px;
+  margin: 0px auto 0px;
   border-radius: 50%;
-  background-color: #FFF;
-  border: 5px solid #FFF;
   object-fit: cover;
 }
 
 .card-header-front h2 {
   color: var(--dark);
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -133,7 +132,7 @@ body {
 
 .card-header-back h2 {
   color: var(--dark);
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -175,7 +174,7 @@ body {
   margin-bottom: 15px;
 }
 
-.card-body2 p {
+.card-body2 .amount-pre {
   display: flex;
   position: fixed;
   color: var(--light);
@@ -200,14 +199,76 @@ input{
   border-radius: 14px;
   margin: 8px 0;
   outline: none;
-  padding: 8px;
+  padding: 15px;
   box-sizing: border-box;
   transition: .3s;
   height: 50px;
   background-color: var(--secondary);
+  color: #FFF;
+  font-size: 18px;
 }
 
 input:focus{
   border-color: dodgerBlue;
   box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number] {
+  display: no;
+}
+
+#btn-front {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+#btn-back {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+
+.card .actions {
+  padding: 0 8px 0;
+  display: flex;
+  flex-direction: column;
+  order: 99;
+}
+
+.actions .pay-btn button {
+  margin-top: 10px;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  background-color: #32c75f;
+  width: 100%;
+  border: none;
+  padding: 16px 16px 16px 16px;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 1.5rem/50%;
+  transition: background-color 100ms ease-in-out, transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.actions .pay-btn button:hover {
+  color: white;
+  background-color: var(--secondary);
+  transform: scale(1.1);
+}
+
+.actions .pay-btn button:active {
+  background-color: var(--secondary);
+  transform: scale(1);
 }
