@@ -44,8 +44,3 @@ function payNow() {
   validate();
 
 // Disable a button if one of the inputs is empty end
-
-
-
-
-
