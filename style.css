@@ -218,8 +218,8 @@ body {
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
-  top: 50%;
-  right: 100%;
+  top: 85px;
+  right: 140px;
   margin-top: -65px;
   border-width: 5px;
   border-style: solid;
