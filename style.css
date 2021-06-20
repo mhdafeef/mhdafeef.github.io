@@ -28,7 +28,6 @@ body {
   height: 100%;
   transition: transform 1s;
   transform-style: preserve-3d;
-  cursor: pointer;
   position: relative;
 }
 
@@ -52,6 +51,33 @@ body {
   background-color: var(--primary);
   justify-content: center;
 }
+
+.top-line-1 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  width: 8px;
+  height: 90px;
+  border-radius: 100px;
+  z-index: 1;
+  background-color: var(--primary);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.top-line-2 {
+  position: absolute;
+  top: -10px;
+  right: 45px;
+  width: 8px;
+  height: 60px;
+  border-radius: 100px;
+  z-index: 1;
+  background-color: var(--primary);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 
 .card-face--front h2 {
   color: #FFF;
@@ -108,7 +134,6 @@ body {
 }
 
 .pp {
-  display: flex;
   width: 170px;
   height: 170px;
   margin: 0px auto 0px;
@@ -155,6 +180,56 @@ body {
   margin-bottom: 15px;
 }
 
+.card-body2 .sp-bg {
+  position: relative;
+  top: -35px;
+  left: 120px;
+  width: 12px;
+  height: 12px;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.212);
+  border: var(--secondary) solid 0.5px;
+}
+
+.card-body2 .imp-note {
+  text-align: center;
+  justify-content: center;
+  font-size: 10px;
+  color: rgb(255, 255, 255);
+}
+
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+ 
+  font-size: 15px;
+  font-weight: 300;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: -20px;
+  left: 22px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -65px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
 .card-body1 p {
   color: var(--light);
   font-size: 18px;
@@ -196,7 +271,7 @@ body {
 input{
   width: 100%;
   border: 2px solid rgb(255, 255, 255);
-  border-radius: 14px;
+  border-radius: 10px;
   margin: 8px 0;
   outline: none;
   padding: 15px;
@@ -227,6 +302,27 @@ input[type=number] {
   display: no;
 }
 
+.card-body2 .amount-pre::before {
+  content: "₹ "; 
+}
+
+.pay-form input::before {
+  content: "₹ "; 
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: var(--primary);
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+  color: var(--primary);
+}
+
+::placeholder {
+  color: var(--primary);
+  text-align: center;
+}
+
 #btn-front {
   position: absolute;
   right: 30px;
@@ -238,7 +334,6 @@ input[type=number] {
   right: 30px;
   bottom: 30px;
 }
-
 
 .card .actions {
   padding: 0 8px 0;
@@ -269,6 +364,17 @@ input[type=number] {
 }
 
 .actions .pay-btn button:active {
-  background-color: var(--secondary);
+  background-color: #32c75f;
   transform: scale(1);
 }
+
+/*
+@media only screen and (min-width: 992px) {
+  .card .actions {
+    display: none;
+  }
+} */
+
+
+
+
