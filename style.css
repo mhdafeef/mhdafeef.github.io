@@ -171,19 +171,13 @@ body {
 
 .card-body1 {
   padding: 0px 30px 30px;
-}
-
-.card-body1 h3 {
-  color: var(--light);
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 15px;
+  justify-content: center;
 }
 
 .card-body2 .sp-bg {
   position: relative;
   top: -35px;
-  left: 120px;
+  left: 115px;
   width: 12px;
   height: 12px;
   border-radius: 100px;
@@ -202,9 +196,8 @@ body {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.774);
   color: #fff;
- 
   font-size: 15px;
   font-weight: 300;
   border-radius: 6px;
@@ -227,14 +220,6 @@ body {
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
-}
-
-
-.card-body1 p {
-  color: var(--light);
-  font-size: 18px;
-  line-height: 1.4;
-  font-weight: 300;
 }
 
 .card-body2 {
@@ -323,12 +308,6 @@ input[type=number] {
   text-align: center;
 }
 
-#btn-front {
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
-}
-
 #btn-back {
   position: absolute;
   right: 30px;
@@ -375,6 +354,114 @@ input[type=number] {
   }
 } */
 
+.social-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+}
+
+.fb-bg {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  border-radius: 100px;
+  margin: 0 10px 0;
+}
+
+.fb-bg .fa-facebook-f {
+  font-size:50px;
+  color: var(--primary);
+  position:absolute;
+  bottom: -4px
+}
+
+.icon-bg {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  border-radius: 100px;
+  margin: 0 10px 0;
+}
+
+.icon-bg .fa-instagram {
+  font-size:40px;
+  color:#683ce7;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.icon-bg .fa-youtube-play {
+  font-size: 35px;
+  color:#683ce7;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.icon-bg .fa-whatsapp {
+  font-size: 40px;
+  color:#683ce7;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.icon-bg .fa-phone {
+  font-size: 40px;
+  color:#683ce7;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
 
 
+.f-pay-btn .f-pay-btn-bg button {
+  top: 12px;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  background-color: #32c75f;
+  width: 155px;
+  border: none;
+  padding: 16px 16px 16px 16px;
+  outline: none;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  border-radius: 1.5rem/50%;
+  transition: background-color 100ms ease-in-out, transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
 
+.f-pay-btn .f-pay-btn-bg button:hover {
+  color: white;
+  background-color: var(--secondary);
+  transform: scale(1.05);
+}
+
+.f-pay-btn .f-pay-btn-bg button:active {
+  background-color: var(--secondary);
+  transform: scale(1);
+}
+
+.f-bottom-slider {
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+}
