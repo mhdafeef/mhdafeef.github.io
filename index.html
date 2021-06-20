@@ -11,9 +11,10 @@
 	<div class="card">
 		<div id="card-inner">
 
-<!-- Card start Start-->
+<!-- Card front Start-->
 
 			<div class="card-face card-face--front">
+				<div class="top-line-1"></div> <div class="top-line-2"></div>
 				<div class="card-content">
 					<div class="card-header-front">
 						<img src="pro-pic.svg" alt="" class="pp" />
@@ -21,6 +22,9 @@
 						<span>Graphics Designer</span>
 					</div>
 					<div class="card-body1">
+						<div class="btns">
+							
+						</div>
 						<h3>JavaScript Wizard</h3>
 						<p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur <strong>adipiscing</strong> elit. Sed id erat a magna lobortis dictum. Nunc est arcu, <strong>lacinia</strong> quis sapien placerat, <strong>laoreet</strong> tincidunt nulla.</p>
 					
@@ -30,10 +34,11 @@
 					</div>
 				</div>
 			</div>
-<!-- Card start End-->
+<!-- Card front End-->
 <!-- Card back Start-->
 
 			<div class="card-face card-face--back">
+				<div class="top-line-1"></div> <div class="top-line-2"></div>
 				<div class="card-content">
 					<div class="card-header-back">
 						<img src="pro-pic.svg" alt="" class="pp" />
@@ -41,17 +46,18 @@
 						<span>Graphics Designer</span>
 					</div>
 					<div class="card-body2">
-						<h3>Payment</h3> <p id="amo-value" class="amount-pre"></p>
+						<h3>Payment</h3> <div class="sp-bg tooltip"> <p class="imp-note">&#8520;</p>
+							<span class="tooltiptext">This is a payment link generator, not a payment gateway. This service is based on UPI payment.</span>
+						</div> <p id="amo-value" class="amount-pre"></p>
 					<div class="pay-form">
-						<input class="user-input" type="text" id="currency-field" name="currency-field" onkeyup="success()" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="₹199.00">
-						<input class="user-input" type="" id="name" onkeyup="success()" placeholder="Remarks">
+						<input class="user-input" type="number" id="amount" onkeyup="myFunction()" placeholder="₹199.00">
+						<input class="user-input" type="text" id="name" placeholder="Remarks">
 					</div>
-					
+					<div id="qrcode"></div>
 						<div  class="actions">
 							<div class="pay-btn">
 							
-							   <!-- "upi://pay?pn=MOHAMED AFEEF&amp;pa=mhdafeef@ybl&amp;cu=INR&amp;am=100.0" -->
-								<button class="paynow-btn" onClick="payNow()">Pay Now</button>
+							   <button class="paynow-btn" onClick="payNow()">Pay Now</button>
 				
 							</div>
 						</div>
@@ -67,6 +73,7 @@
 
 		</div>
 	</div>
+
 	<script src="script.js"></script>
 	
 </body>
