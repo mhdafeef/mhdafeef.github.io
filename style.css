@@ -8,12 +8,13 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 body {
   font-family: montserrat, sans-serif;
   width: 100%;
-  min-height: 100vh;
+  /*min-height: 100vh;*/
 
 }
 
@@ -24,44 +25,11 @@ h1, h2, h3, p .typing {
   -webkit-animation: fadein 2s; /* Safari and Chrome */
   -o-animation: fadein 2s; /* Opera */
 }
-@keyframes fadein {
-  from {
-      opacity:0;
-  }
-  to {
-      opacity:1;
-  }
-}
-@-moz-keyframes fadein { /* Firefox */
-  from {
-      opacity:0;
-  }
-  to {
-      opacity:1;
-  }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-  from {
-      opacity:0;
-  }
-  to {
-      opacity:1;
-  }
-}
-@-o-keyframes fadein { /* Opera */
-  from {
-      opacity:0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
 
 .card {
-  margin: 4vh auto 0;
+  margin: 2vh auto 0;
   width: 330px;
-  height: 700px;
+  height: 650px;
   perspective: 1000px;
 }
 
@@ -309,6 +277,7 @@ input{
   background-color: var(--secondary);
   color: #FFF;
   font-size: 18px;
+  text-align: center;
 }
 
 input:focus{
@@ -345,6 +314,7 @@ input[type=number] {
 ::placeholder {
   color: var(--primary);
   text-align: center;
+
 }
 
 #btn-back {
@@ -398,68 +368,57 @@ input[type=number] {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 70px;
 }
 
-.fb-bg {
+
+.ic {
   width: 60px;
   height: 60px;
-  background-color: white;
-  justify-content: center;
-  display: flex;
-  position: relative;
   border-radius: 100px;
-  margin: 0 10px 0;
-}
-
-.fb-bg .fa-facebook-f {
-  font-size:50px;
+  background-color: white;
   color: var(--primary);
-  position:absolute;
-  bottom: -4px
-}
-
-.icon-bg {
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  justify-content: center;
-  display: flex;
-  position: relative;
-  border-radius: 100px;
   margin: 0 10px 0;
+
 }
 
-.icon-bg .fa-instagram {
+.ic:hover {
+  color: white;
+  background-color: var(--secondary);
+}
+
+.ic.fa-facebook-f {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.ic.fa-instagram {
   font-size:40px;
-  color:#683ce7;
   display: flex;
-  position: relative;
+  justify-content: center;
   align-items: center;
 }
 
-.icon-bg .fa-youtube-play {
+.ic.fa-youtube-play {
   font-size: 35px;
-  color:#683ce7;
   display: flex;
-  position: relative;
+  justify-content: center;
   align-items: center;
 }
 
-.icon-bg .fa-whatsapp {
+.ic.fa-whatsapp {
   font-size: 40px;
-  color:#683ce7;
   display: flex;
-  position: relative;
+  justify-content: center;
   align-items: center;
 }
 
-.icon-bg .fa-phone {
+.ic.fa-phone {
   font-size: 40px;
-  color:#683ce7;
   display: flex;
-  position: relative;
+  justify-content: center;
   align-items: center;
 }
 
@@ -468,7 +427,7 @@ input[type=number] {
   position: relative;
   align-items: center;
   justify-content: center;
-  bottom: -50px;
+  bottom: -45px;
 }
 
 .f-pay-btn .f-pay-btn-bg button {
@@ -483,6 +442,8 @@ input[type=number] {
   position: absolute; 
   border-radius: 20px;
   transition: background-color 100ms ease-in-out, transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .f-pay-btn .f-pay-btn-bg button:hover {
@@ -497,17 +458,29 @@ input[type=number] {
 }
 
 .f-bottom-slider {
-  margin-top: 50px;
+  margin-top: 45px;
   background-color: white;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 80px;
+  height: 85px;
 }
 
+
 .f-bottom-slider2 {
+  margin-top: 15px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 85px;
+}
+
+.f-top-slider-back {
   margin-top: 20px;
   background-color: white;
   border-radius: 10px;
@@ -515,5 +488,65 @@ input[type=number] {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 90px;
+  height: 70px;
+}
+
+
+@-webkit-keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+.icon::before {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon:hover::before {
+  -webkit-animation: wiggle 0.1s linear infinite;
+          animation: wiggle 0.1s linear infinite;
+}
+
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity: 1;
+  }
 }
