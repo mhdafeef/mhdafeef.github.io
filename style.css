@@ -185,6 +185,11 @@ h1, h2, h3, p .typing {
   justify-content: center;
 }
 
+.card-header-front .typing, .card-header-back .typing2 {
+  font-weight: 400;
+  
+}
+
 .card-body2 .sp-bg {
   position: relative;
   top: -35px;
@@ -277,7 +282,6 @@ input{
   background-color: var(--secondary);
   color: #FFF;
   font-size: 18px;
-  text-align: center;
 }
 
 input:focus{
@@ -313,7 +317,6 @@ input[type=number] {
 
 ::placeholder {
   color: var(--primary);
-  text-align: center;
 
 }
 
