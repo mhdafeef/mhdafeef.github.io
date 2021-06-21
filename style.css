@@ -14,12 +14,54 @@ body {
   font-family: montserrat, sans-serif;
   width: 100%;
   min-height: 100vh;
+
 }
+
+
+h1, h2, h3, p .typing {
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
 
 .card {
   margin: 4vh auto 0;
-  width: 325px;
-  height: 600px;
+  width: 330px;
+  height: 700px;
   perspective: 1000px;
 }
 
@@ -130,6 +172,7 @@ body {
   background-size: cover;
   z-index: -1;
   height: 290px;
+  overflow: hidden;
   border-radius: 0px 0px 0% 0px;
 }
 
@@ -170,7 +213,7 @@ body {
 }
 
 .card-body1 {
-  padding: 0px 30px 30px;
+  padding: 0px 20px 30px;
   justify-content: center;
 }
 
@@ -227,7 +270,7 @@ body {
 }
 
 .card-body2 h3 {
-  margin-top: 10px;
+  margin-top: 20px;
   color: var(--light);
   font-size: 24px;
   font-weight: 600;
@@ -291,10 +334,6 @@ input[type=number] {
   content: "₹ "; 
 }
 
-.pay-form input::before {
-  content: "₹ "; 
-}
-
 ::-webkit-input-placeholder { /* Edge */
   color: var(--primary);
 }
@@ -310,8 +349,9 @@ input[type=number] {
 
 #btn-back {
   position: absolute;
-  right: 30px;
-  bottom: 30px;
+  color: white;
+  right: 15px;
+  bottom: 15px;
 }
 
 .card .actions {
@@ -423,24 +463,25 @@ input[type=number] {
   align-items: center;
 }
 
-
-.f-pay-btn .f-pay-btn-bg button {
-  top: 12px;
-  color: white;
-  font: inherit;
-  font-weight: bold;
-  background-color: #32c75f;
-  width: 155px;
-  border: none;
-  padding: 16px 16px 16px 16px;
-  outline: none;
-  box-sizing: border-box;
+.f-pay-btn-bg {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  position: relative;
-  margin: auto;
-  border-radius: 1.5rem/50%;
+  bottom: -50px;
+}
+
+.f-pay-btn .f-pay-btn-bg button {
+  color: white;
+  font: inherit;
+  background-color: #32c75f;
+  width: 120px;
+  height: 40px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  position: absolute; 
+  border-radius: 20px;
   transition: background-color 100ms ease-in-out, transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
@@ -456,12 +497,23 @@ input[type=number] {
 }
 
 .f-bottom-slider {
-  margin-top: 30px;
+  margin-top: 50px;
   background-color: white;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 70px;
+  height: 80px;
+}
+
+.f-bottom-slider2 {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;
 }
