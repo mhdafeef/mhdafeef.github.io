@@ -288,10 +288,6 @@ body:focus {
   /* .gallery .image{
     width: 100%;
   } */
-
-  .top-img {
-    display: none;
-  }
   
   .top-img img {
     display: none;
