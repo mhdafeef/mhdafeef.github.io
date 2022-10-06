@@ -169,7 +169,7 @@ body:focus {
   opacity: 0;
   pointer-events: none;
   border-radius: 6px;
-  padding: 0 5px 60px 5px;
+  padding: 0 60px 40px;
 }
 .preview-box.show{
   opacity: 1;
